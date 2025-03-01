@@ -16,10 +16,10 @@ The vertical velocity of the lander is controlled based on a few different thing
 The PID is very stiff with quite a lot of I to remove any steady-state error very quickly. There is no D as we don't tend to overshoot.
 
 ## 2.2 Horizontal PID
-The horizontal position of the lander is controlled relative to an X-axis coordinate (middle of the landing zone).
+The horizontal position of the lander is controlled relative to an X-axis coordinate (middle of the landing zone). There is a moderate amount of P, I and D on this controller, where the D is particularly useful to factor horizontal velocity (derivative of error), and it really stops overshoot nicely.
 
 ## 2.3 Angle PID
-3. The angle of the lander, trying to maintain 0 angle
+The angle of the lander, trying to maintain 0 angle. It's super simple, using only P and D terms. No I is a good idea as this is a truly proportional problem, and the D stops the lander from wobbling on occasion if the angle is rapidly changing. 
 
 ## 2.4 Coupling of Horizontal and Angle PIDs
 The horizontal and angle PIDs are coupled by simply summing them together. The angle PID has an output that can swing further than the horizontal to make sure it can always over-ride the horizontal thrusters.
@@ -35,14 +35,16 @@ Likely, this could be improved with a bit more time (and knowledge), especially 
 
 ## 4.1 PID Results
 Here is a video of the PID solution:
-![](/videos/pid-video.mp4)
+![VIDEO](/videos/pid-video.mp4)
+
 Average Score: 276.48 Max Score: 313.30 Min Score: 231.45
 
 ## 4.2 ML Results
 Here is a video of the best model I could wrangle:
-![](/videos/rl-video.mp4)
+![VIDEO](/videos/rl-video.mp4)
 
 I captured a few of the results from different sizes of networks:
+
 2x 128 neuron hidden layers - Average Score:  281.33 Max Score:  317.25 Min Score 60.57
 2x 256 neuron hidden layers - Average Score:  275.39 Max Score:  320.31 Min Score -116.31
 4x 128 neuron hidden layers - Average Score:  283.28 Max Score:  327.43 Min Score 16.09
