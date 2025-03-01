@@ -35,13 +35,13 @@ Likely, this could be improved with a bit more time (and knowledge), especially 
 
 ## 4.1 PID Results
 Here is a video of the PID solution:
-https://github.com/DougStreet/gym_lander/blob/main/videos/pid-video.mp4
+![](https://github.com/DougStreet/gym_lander/blob/main/videos/pid-video.gif)
 
 Average Score: 276.48 Max Score: 313.30 Min Score: 231.45
 
 ## 4.2 ML Results
 Here is a video of the best model I could wrangle:
-https://github.com/DougStreet/gym_lander/blob/main/videos/rl-video.mp4
+![](https://github.com/DougStreet/gym_lander/blob/main/videos/rl-video.gif)
 
 I captured a few of the results from different sizes of networks:
 
