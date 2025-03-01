@@ -46,5 +46,7 @@ Here is a video of the best model I could wrangle:
 I captured a few of the results from different sizes of networks:
 
 2x 128 neuron hidden layers - Average Score:  281.33 Max Score:  317.25 Min Score 60.57
+
 2x 256 neuron hidden layers - Average Score:  275.39 Max Score:  320.31 Min Score -116.31
+
 4x 128 neuron hidden layers - Average Score:  283.28 Max Score:  327.43 Min Score 16.09
